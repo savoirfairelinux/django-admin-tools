@@ -1,9 +1,9 @@
 {% load i18n static admin_tools_dashboard_tags %}
 
 {% block dashboard_scripts %}
-<script type="text/javascript" src="{% static "admin_tools/js/utils.js" %}"></script>
+<script type="text/javascript" nonce="{{request.csp_nonce}}" src="{% static "admin_tools/js/utils.js" %}"></script>
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript" nonce="{{request.csp_nonce}}" charset="utf-8">
     // Load js files syncronously and conditionally
 
     var js_files = [
